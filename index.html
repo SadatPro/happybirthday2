@@ -15,10 +15,10 @@ button{font:inherit;color:inherit;border:0;background:none;cursor:pointer;touch-
 :focus-visible{outline:3px solid var(--plum);outline-offset:3px}
 .hide{display:none!important}
 h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.1}
-h2{font-size:clamp(2.1rem,9vw,3.6rem);margin-bottom:.6rem;color:var(--plum);text-shadow:0 3px 12px rgba(217,4,41,.35)}
+h2{font-size:clamp(2.1rem,9vw,3.6rem);margin-bottom:.6rem;color:var(--plum)}
 .sub{color:var(--mute);margin-bottom:2rem;font-weight:500}
 section{position:relative;z-index:2;min-height:100svh;padding:10svh 1.1rem;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;max-width:1040px;margin:auto}
-.glass{background:var(--glass);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid #fff;box-shadow:var(--shadow);border-radius:22px}
+.glass{background:var(--glass);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.9);box-shadow:0 10px 28px rgba(91,19,43,.12);border-radius:14px}
 .rv{opacity:0;transform:translateY(22px);transition:opacity 1s ease,transform 1s ease;transition-delay:var(--d,0s)}
 .rv.in{opacity:1;transform:none}
 .btn{position:relative;overflow:hidden;padding:1rem 2rem;min-height:54px;max-width:100%;border-radius:99px;color:#fff;font-weight:700;letter-spacing:.03em;background:linear-gradient(135deg,var(--rose),var(--plum));box-shadow:0 12px 28px rgba(217,4,41,.5),0 3px 0 rgba(255,255,255,.35) inset;transition:transform .3s,box-shadow .3s}
@@ -47,19 +47,18 @@ section{position:relative;z-index:2;min-height:100svh;padding:10svh 1.1rem;displ
 .hb{font-size:clamp(1.8rem,7vw,3rem);letter-spacing:.05em;color:var(--plum)}
 .heart{color:var(--rose);font-size:2rem;margin:.8rem 0;text-shadow:0 4px 14px rgba(217,4,41,.6)}
 #message p{font:italic 600 clamp(1.5rem,6vw,2.5rem)/1.4 var(--serif);max-width:20ch;margin:0 auto 1.3rem;color:var(--plum);text-shadow:0 2px 10px rgba(255,255,255,.8)}
-.tl{position:relative;width:100%;max-width:640px;text-align:left;padding-left:3.2rem}
+.tl{position:relative;width:100%;max-width:700px;text-align:left;padding-left:3.2rem}
 .tl:before{content:"";position:absolute;left:1.1rem;top:0;bottom:0;width:3px;border-radius:3px;background:linear-gradient(var(--rose),var(--plum),var(--gold))}
-.st{position:relative;margin-bottom:2.4rem;padding:1rem 1.1rem;background:var(--glass);border-radius:18px;box-shadow:var(--shadow)}
-.st .n{position:absolute;left:-3.2rem;top:.6rem;width:2.3rem;height:2.3rem;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,var(--rose),var(--plum));color:#fff;font:700 .95rem var(--sans);box-shadow:0 6px 14px rgba(217,4,41,.5)}
+.st{position:relative;margin-bottom:1.5rem;padding:1.2rem 1.25rem;background:rgba(255,255,255,.88);border:1px solid rgba(176,0,31,.1);border-radius:12px;box-shadow:0 8px 24px rgba(91,19,43,.1)}
+.st .n{position:absolute;left:-3.2rem;top:.6rem;width:2.3rem;height:2.3rem;border-radius:50%;display:grid;place-items:center;background:var(--deep);color:#fff;font:700 .95rem var(--sans);box-shadow:0 4px 10px rgba(91,19,43,.2)}
 .st small{color:var(--deep);font-weight:700;letter-spacing:.06em}.st h3{font-size:1.8rem;color:var(--plum)}.st p{color:var(--mute)}
 .st img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:14px;margin-top:.8rem;box-shadow:var(--shadow)}
 .gal{display:grid;grid-template-columns:repeat(2,1fr);gap:.9rem;width:100%;max-width:900px;padding:.4rem}
 @media(min-width:800px){.gal{grid-template-columns:repeat(4,1fr);gap:1.4rem}}
-.ph{position:relative;aspect-ratio:3/4;border-radius:18px;overflow:hidden;box-shadow:var(--shadow);border:5px solid #fff;background:linear-gradient(135deg,#FFD6E4,#F4A3BE);text-align:left;transition:transform .4s,box-shadow .4s}
-.ph:nth-child(odd){transform:rotate(-2deg)}.ph:nth-child(even){transform:rotate(2deg) translateY(.8rem)}
-.ph:first-child{grid-column:span 2;grid-row:span 2;aspect-ratio:auto;min-height:260px;transform:rotate(-1deg)}
+.ph{position:relative;aspect-ratio:3/4;border-radius:10px;overflow:hidden;box-shadow:0 8px 22px rgba(91,19,43,.16);border:3px solid #fff;background:linear-gradient(135deg,#FFD6E4,#F4A3BE);text-align:left;transition:transform .3s,box-shadow .3s}
+.ph:first-child{grid-column:span 2;grid-row:span 2;aspect-ratio:auto;min-height:260px}
 .ph:active{transform:scale(.97)}
-@media(hover:hover){.ph:hover{transform:rotate(0) scale(1.04);z-index:3}}
+@media(hover:hover){.ph:hover{transform:scale(1.025);box-shadow:0 14px 30px rgba(91,19,43,.22);z-index:3}}
 .ph img{width:100%;height:100%;object-fit:cover}
 .ph b{position:absolute;left:0;right:0;bottom:0;padding:1.6rem .8rem .6rem;font:italic 600 1.2rem var(--serif);color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.6);background:linear-gradient(transparent,rgba(13,13,15,.75))}
 dialog{border:0;background:none;color:inherit;margin:auto;width:min(92vw,460px);max-height:92svh;overflow:visible;padding:0}
@@ -175,16 +174,17 @@ const CONFIG={girlfriendName:"Mehu",yourName:"Sadat (Sadu Pagla)",age:24,
  musicSrc:""}; // paste a data:audio/mpeg;base64,... string to add music
 const personalMessage=["If I could give you one thing today...","I'd let you see yourself the way I see you.","Then you'd know why this Pagla is so crazy about you."];
 const story=[
- {date:"DD Month YYYY",title:"The Beginning",text:"Where everything started...",image:""},
- {date:"DD Month YYYY",title:"Our First Conversation",text:"The conversation I didn't know I'd remember for so long.",image:""},
- {date:"DD Month YYYY",title:"That One Moment",text:"A moment that changed something.",image:""},
- {date:"29 September 2026",title:"Today",text:"And here we are...",image:""}];
+ {date:"2022",title:"Where It Began",text:"The first chapter of a story that means so much to me.",image:"img/photo_2026-09-28_23-51-14.jpg"},
+ {date:"2023",title:"Growing Closer",text:"A year of shared moments and memories worth keeping.",image:"img/photo_2026-09-28_23-51-21.jpg"},
+ {date:"2024",title:"More Reasons to Smile",text:"Little moments, made special simply because they were ours.",image:"img/photo_2026-09-28_23-51-25.jpg"},
+ {date:"2025",title:"A Favorite Kind of Us",text:"Another year of laughter, warmth, and being together.",image:"img/photo_2026-09-28_23-51-28.jpg"},
+ {date:"2026",title:"The Story Continues",text:"Today is another beautiful page, with many more still to come.",image:"img/photo_2026-09-28_23-51-32.jpg"}];
 const memories=[
- {image:"",title:"That Day",date:"12 June 2025",caption:"One of my favorite memories."},
- {image:"",title:"Just Us",date:"DD Month YYYY",caption:"Write a caption here."},
- {image:"",title:"Laughing",date:"DD Month YYYY",caption:"Write a caption here."},
- {image:"",title:"Golden Hour",date:"DD Month YYYY",caption:"Write a caption here."},
- {image:"",title:"A Quiet Evening",date:"DD Month YYYY",caption:"Write a caption here."}];
+ {image:"img/photo_2026-09-28_23-51-14.jpg",title:"Where It Began",date:"2022",caption:"The first chapter of a story that means so much to me."},
+ {image:"img/photo_2026-09-28_23-51-21.jpg",title:"Growing Closer",date:"2023",caption:"A year of shared moments and memories worth keeping."},
+ {image:"img/photo_2026-09-28_23-51-25.jpg",title:"More Reasons to Smile",date:"2024",caption:"Little moments, made special simply because they were ours."},
+ {image:"img/photo_2026-09-28_23-51-28.jpg",title:"A Favorite Kind of Us",date:"2025",caption:"Another year of laughter, warmth, and being together."},
+ {image:"img/photo_2026-09-28_23-51-32.jpg",title:"The Story Continues",date:"2026",caption:"Today is another beautiful page, with many more still to come."}];
 const loveNotes=[
  {title:"Your Smile",text:"Somehow it turns even a boring, tired day into a good one."},
  {title:"Your Laugh",text:"It's my favorite sound. I'd say silly things all day just to hear it."},
